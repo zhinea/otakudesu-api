@@ -48,7 +48,7 @@ const homeOngoing = (request, reply) => {
 		 	});
 		 })
 		 .catch(error => {
-		 	console.error(error);
+		 	console.error(error.response);
 		 	
 		 	reply.send({
 		 		status: false,
