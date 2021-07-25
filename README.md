@@ -1,1 +1,3 @@
-#Otakudesu Unofficial API
+DEPRECETED
+
+# Otakudesu Unofficial API
