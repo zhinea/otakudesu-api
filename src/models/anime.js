@@ -63,7 +63,7 @@ const homeOngoing = async (request, reply) => {
 	try {
 		let response = await cf.request(config.path('home'));
 
-		let $ = cheerio.load(response)
+		let $ = cheerio.load(response);
 
 	 	let container = $('#venkonten > div > div.venser > div.venutama > div > div.rapi > div > ul > li');
 
