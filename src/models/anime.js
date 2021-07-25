@@ -1,7 +1,10 @@
 var axios = require('axios');
-var fetch = require('cloudflare-scraper');
+// var fetch = require('cloudflare-scraper');
 var cheerio = require('cheerio');
 var config = require('./../otakudesu');
+const CloudflareBypasser = require('cloudflare-bypasser');
+ 
+let cf = new CloudflareBypasser();
 
 const getText = (t) => {
 	return t.clone()
@@ -58,7 +61,7 @@ const homeOngoing = async (request, reply) => {
 	// 	 });
 
 	try {
-		let response = await fetch.get(config.path('home'));
+		let response = await cf.request(config.path('home'));
 
 		let $ = cheerio.load(response)
 
@@ -84,7 +87,7 @@ const homeOngoing = async (request, reply) => {
 	 		status : true,
 	 		data: animes
 	 	});
-	 	
+
 		
 	} catch (e) {
 		console.error(e);
