@@ -1,6 +1,6 @@
 
 var fastify = require('fastify')({
-	logger: false
+	logger: true
 });
 
 
