@@ -84,6 +84,7 @@ const homeOngoing = async (request, reply) => {
 	 		status : true,
 	 		data: animes
 	 	});
+	 	
 		
 	} catch (e) {
 		console.error(e);
